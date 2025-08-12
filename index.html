@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen House Centro Terapêutico Reabilitação de Dependência Quimica Alcoolismo e Saúde Mental</title>
+
+    <!-- Metatags -->
+  <meta name="description" content="Centro Terapêutico Zen House, Especializado em Tratamento de Saúde Mental, Alcoolismo e Dependência Química. Oferecemos abordagens personalizadas em um ambiente acolhedor, com profissionais dedicados a apoiar a recuperação eficaz e duradoura.">
+  <meta name="keywords" content="clinica de recuperação, tratamento alcoolismo, dependência química, saúde mental, centro de reabilitação, cabreuva, mairiporã, jundiai, são paulo, clinica de recuperação estado de são paulo, clinicas em são paulo para usuário de drogas, farmacodependente">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.zenhousecentroterapeutico.com.br">
+  <meta property="og:title" content="Zen House Centro Terapêutico Reabilitação de Dependência Quimica Alcoolismo e Saúde Mental">
+  <meta property="og:description" content="Centro Terapêutico Zen House, Especializado em Tratamento de Saúde Mental, Alcoolismo e Dependência Química. Oferecemos abordagens personalizadas em um ambiente acolhedor, com profissionais dedicados a apoiar a recuperação eficaz e duradoura.">
+  <meta property="og:image" content="https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-1/518278168_122121973358899507_6841032382446094041_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=oOpsJBjp_JsQ7kNvwEGydOV&_nc_oc=Adk3KYSA3PCPBq7O7TySsPcmY8rEyPdenKsrGjIinrFCX-W4aKsJS5tCymIX7c5DEgo&_nc_zt=24&_nc_ht=scontent-gru1-2.xx&_nc_gid=-176KUK4dFutrrpEN09XVQ&oh=00_AfX9SK5v0QUccxIXRGJmWxq2j-7CNJlOOF30jvRcMCbKlQ&oe=68A0B344" />
+
+       <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">    
+    
+    <style>
+        /* Estilos base */
+        :root{
+            --gap: 16px;
+            --controls-size: 44px;
+            --dot-size: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #4a4a4a;
+        }
+
+        .logo-titulo {
+            width: 100px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        /* Menu de Navegação - Estilo padrão (para desktop) */
+        .nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none; /* Adicionado para remover marcadores de lista */
+            margin: 0;
+        }
+        
+        .nav a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        .main-content {
+            padding: 20px;
+            max-width: 960px;
+            margin: auto;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #e9e9e9;
+            border: 2px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            color: #888;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        /* Estilos do Carrossel */
+        .carousel {
+            width: 100%;
+            max-width: 980px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: var(--gap);
+            transition: transform 400ms cubic-bezier(.2,.9,.3,1);
+            will-change: transform;
+        }
+
+        .carousel-viewport {
+            overflow: hidden;
+            border-radius: 12px;
+            background: white;
+            padding: 8px;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 200px; /* largura maior para cada item */
+            height: 150px; /* altura fixa para manter padrão */
+            outline: none; /* remover contorno ao focar */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* para a imagem preencher sem distorcer */
+            border-radius: 8px; /* bordas arredondadas, opcional */
+            display: block;
+        }
+
+        .carousel-item:hover img,
+        .carousel-item:focus-within img {
+            transform: scale(1.12);
+            filter: saturate(1.03);
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: var(--controls-size);
+            height: var(--controls-size);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.9);
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            cursor: pointer;
+            z-index: 10;
+        }
+        .carousel-button svg{width: 20px; height: 20px}
+        .carousel-button[aria-label="Anterior"]{ left: -12px; }
+        .carousel-button[aria-label="Próximo"]{ right: -12px; }
+
+        .carousel-dots{
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 12px;
+        }
+        .carousel-dot{
+            width: var(--dot-size);
+            height: var(--dot-size);
+            border-radius: 50%;
+            background: rgba(0,0,0,0.15);
+            border: none;
+            cursor: pointer;
+        }
+        .carousel-dot[aria-current="true"]{
+            background: rgba(0,0,0,0.65);
+            transform: scale(1.1);
+        }
+
+        .carousel-button:focus,
+        .carousel-dot:focus{
+            outline: 3px solid rgba(0,120,255,0.18);
+            outline-offset: 2px;
+        
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .logo-titulo {
+                width: 70px;
+            }
+        }
+
+        /* Container que engloba a imagem específica: deixa flex, centraliza e altura total da tela */
+        .carousel-item.centralizar-familia {
+            display: flex;
+            justify-content: center; /* centraliza horizontalmente */
+            align-items: center;     /* centraliza verticalmente */
+            height: 100vh;           /* altura igual a 100% da viewport (tela) */
+        }
+
+        /* Estilo para a imagem dentro desse container */
+        .carousel-item.centralizar-familia img {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .image {
+            width: 100%; /* Ajusta o container para largura total disponível */
+            overflow: hidden; /* Esconde parte da imagem que sair do container durante o zoom */
+        }
+
+        .imagem-ampliada {
+            width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+            height: auto; /* Mantém a proporção da imagem */
+            transition: transform 0.5s ease; /* Transição suave para o zoom */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .imagem-ampliada:hover {
+            transform: scale(1.1); /* Zoom de 10% ao passar o mouse */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+            display: inline-block;
+        }
+
+        /* Estilos do menu mobile */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                display: none;
+            }
+            .nav.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+                text-align: right;
+                padding: 10px;
+                background-color: #333;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>
+            <img src="fundo.jpg" alt="Logo Zen House" class="logo-titulo">
+            Zen House Centro Terapêutico
+        </h1>
+    </header>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <nav class="nav">
+        <a href="#sobre" onclick="closeMenu()">Sobre Nós</a>
+        <a href="#tratamento" onclick="closeMenu()">Tratamento</a>
+        <a href="#contato" onclick="closeMenu()">Contato</a>
+    </nav>
+
+    <div class="main-content">
+        <section id="sobre" class="section">
+            <h2>Sobre Nós</h2>
+            <p style="text-align: justify;">
+    Recomeçar é um ato de coragem e na <strong>Zen House</strong>, cada passo dessa jornada é guiado pelo acolhimento verdadeiro, pelo cuidado integral e pelo respeito ao ser humano em sua totalidade.
+    <br><br>
+    Aqui, não tratamos apenas sintomas, mas ouvimos histórias, compreendemos dores e despertamos forças internas. Acreditamos que a transformação começa quando a pessoa se reconecta consigo mesma, encontra equilíbrio e redescobre o sentido da vida.
+    <br><br>
+    Nosso compromisso é oferecer um ambiente seguro, sereno e humano, onde o tratamento da dependência química, do alcoolismo e das questões de saúde mental acontece de forma integrada, cuidando do corpo, da mente, das emoções e das relações.
+    Na <strong>Zen House</strong>, cada recomeço é uma vitória, e cada vida transformada é a nossa maior missão.
+</p>
+            <p>
+        </section>
+
+        <section id="galeria" class="section">
+            <h2 style="text-align: center;">
+    Nossas Unidades Masculinas e Femininas Consulte-nos
+    <br><br>
+    <a href="https://wa.me/5511999999999" target="_blank" 
+       style="text-decoration: none; background-color: #25D366; color: white; padding: 8px 12px; border-radius: 5px; font-weight: bold; font-family: Arial, sans-serif;"
+       class="bounce">
+        Fale Conosco
+    </a>
+</h2>
+            <div class="carousel" id="carousel" aria-roledescription="carousel">
+                <button class="carousel-button" id="prevBtn" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 18l-6-6 6-6"/></svg>
+                </button>
+
+                <div class="carousel-viewport" id="viewport" tabindex="0" aria-live="polite">
+                    <div class="carousel-track" id="track">
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem1.jpg" alt="imagem 1"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem2.jpg" alt="imagem 2"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem3.jpg" alt="imagem 3"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem4.jpg" alt="imagem 4"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem5.jpg" alt="imagem 5"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem6.jpg" alt="imagem 6"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem7.jpg" alt="imagem 7"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem8.jpg" alt="imagem 8"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem9.jpg" alt="imagem 9"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem10.jpg" alt="imagem 10"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem11.jpg" alt="imagem 11"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem12.jpg" alt="imagem 12"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem13.jpg" alt="imagem 13"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem14.jpg" alt="imagem 14"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem15.jpg" alt="imagem 15"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem16.jpg" alt="imagem 16"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem17.jpg" alt="imagem 17"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem18.jpg" alt="imagem 18"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem19.jpg" alt="imagem 19"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem20.jpg" alt="imagem 20"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem21.jpg" alt="imagem 21"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem22.jpg" alt="imagem 22"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem23.jpg" alt="imagem 23"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem24.jpg" alt="imagem 24"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem25.jpg" alt="imagem 25"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem26.jpg" alt="imagem 26"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem27.jpg" alt="imagem 27"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem28.jpg" alt="imagem 28"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem29.jpg" alt="imagem 29"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem30.jpg" alt="imagem 30"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem31.jpg" alt="imagem 31"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem32.jpeg" alt="imagem 32"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem33.jpeg" alt="imagem 33"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem34.jpeg" alt="imagem 34"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem35.jpeg" alt="imagem 35"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem36.jpeg" alt="imagem 36"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem37.jpeg" alt="imagem 37"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem38.jpeg" alt="imagem 38"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem39.jpeg" alt="imagem 39"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem40.jpeg" alt="imagem 40"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem41.jpeg" alt="imagem 41"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem42.jpeg" alt="imagem 42"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem43.jpeg" alt="imagem 43"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem44.jpeg" alt="imagem 44"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem45.jpeg" alt="imagem 45"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem46.jpeg" alt="imagem 46"></div>
+                        <div class="carousel-item" tabindex="0"><img src="unidadesfotos/imagem47.jpeg" alt="imagem 47"></div>  
+
+                    </div>
+                </div>
+
+                <button class="carousel-button" id="nextBtn" aria-label="Próximo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6l6 6-6 6"/></svg>
+                </button>
+
+                <div class="carousel-dots" id="dots" role="tablist" aria-label="Navegação do carrossel"></div>
+            </div>
+        </section>
+
+        <section id="tratamento" class="section">
+            <h2>Nosso Tratamento</h2>
+            <p style="text-align: center;">
+    <strong>
+        Aqui, não tratamos apenas de dependência. Tratamos de vidas que foram quebradas pelo desespero, pelo medo e pela solidão. Cada pessoa que chega até nós carrega uma história de luta silenciosa - noites sem esperança, sonhos desfeitos e uma batalha interna que parece impossível de vencer.
+        <br><br>
+        Nosso tratamento vai além das medicações e terapias convencionais. Nós mergulhamos fundo na essência do ser humano, resgatando a dignidade perdida e reacendendo a chama do desejo de viver. É um caminho árduo, cheio de desafios, mas nunca estamos sozinhos nessa jornada.
+        Aqui, transformamos dor em força, fraqueza em coragem, e desespero em renascimento. Porque acreditamos que ninguém está além da salvação, e que toda vida merece uma segunda chance.
+        Se hoje você sente que não há saída, saiba: nosso tratamento é a ponte entre o abismo e a luz. Venha se reencontrar. Venha recomeçar.
+    </strong>
+</p>
+
+            <main>
+                <div class="image">
+                    <img src="familia/familia1.jpg" alt="Imagem ampliada" class="imagem-ampliada" />
+                </div>  
+            </main>
+        </section>
+
+        <section id="contato" class="section">
+            <h2>Contato</h2>
+            <p>
+                Entre em contato para saber mais sobre nossos serviços e como podemos ajudar. Estamos aqui para você.
+            </p>
+            <p>
+                Telefone: (00) 12345-6789 <br>
+                E-mail: contato@zenhouse.com.br <br>
+                Endereço: Rua da Paz, 123 - Cidade Zen, SP
+            </p>
+            <a href="https://wa.me/5511966502860" class="whatsapp-btn">Fale Conosco pelo WhatsApp</a>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>
+            <img src="footer.png" alt="Logo Zen House" class="logo-titulo" style="vertical-align: middle; height: 50px; margin-right: 50px;">
+            &copy; 2025 Zen House Centro Terapêutico. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+        // A função toggleMenu e closeMenu já não são necessárias, mas foram mantidas
+        // para o caso de você querer reativar o menu hambúrguer no futuro.
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.remove('active');
+        }
+
+        (function(){
+            const carousel = document.getElementById('carousel');
+            const track = document.getElementById('track');
+            const items = Array.from(track.children);
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsWrap = document.getElementById('dots');
+            const viewport = document.getElementById('viewport');
+
+            let currentIndex = 0;
+            let perView = 1;
+            let itemWidth = 0;
+
+            function buildDots(pages){
+                dotsWrap.innerHTML = '';
+                for(let i=0;i<pages;i++){
+                    const btn = document.createElement('button');
+                    btn.className = 'carousel-dot';
+                    btn.type = 'button';
+                    btn.setAttribute('aria-label', 'Ir para a página ' + (i+1));
+                    btn.setAttribute('aria-current', i===0 ? 'true' : 'false');
+                    btn.addEventListener('click', ()=>{
+                        goTo(i*perView);
+                    });
+                    dotsWrap.appendChild(btn);
+                }
+            }
+
+            function updateLayout(){
+                const viewportWidth = viewport.clientWidth;
+                if(viewportWidth >= 900) perView = 3;
+                else if(viewportWidth >= 700) perView = 2;
+                else perView = 1;
+
+                itemWidth = (viewportWidth - ( (perView - 1) * parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap')) )) / perView;
+
+                items.forEach(i => {
+                    i.style.flex = `0 0 ${itemWidth}px`;
+                });
+
+                const pages = Math.max(1, Math.ceil(items.length / perView));
+                buildDots(pages);
+
+                if(currentIndex > items.length - perView) currentIndex = Math.max(0, items.length - perView);
+                moveToIndex(currentIndex);
+            }
+
+            function moveToIndex(index){
+                const x = index * (itemWidth + parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap')));
+                track.style.transform = `translateX(-${x}px)`;
+
+                const activePage = Math.floor(index / perView);
+                Array.from(dotsWrap.children).forEach((d, i) => d.setAttribute('aria-current', i === activePage ? 'true' : 'false'));
+            }
+
+            function goTo(index){
+                currentIndex = Math.max(0, Math.min(index, items.length - perView));
+                moveToIndex(currentIndex);
+            }
+
+            prevBtn.addEventListener('click', ()=> goTo(currentIndex - perView));
+            nextBtn.addEventListener('click', ()=> goTo(currentIndex + perView));
+
+            carousel.addEventListener('keydown', (e)=>{
+                if(e.key === 'ArrowLeft') { e.preventDefault(); goTo(currentIndex - 1); }
+                if(e.key === 'ArrowRight'){ e.preventDefault(); goTo(currentIndex + 1); }
+            });
+
+            let startX = 0;
+            let isDragging = false;
+            viewport.addEventListener('touchstart', (e)=> {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            }, {passive:true});
+            viewport.addEventListener('touchmove', (e)=> {
+                if(!isDragging) return;
+                const dx = e.touches[0].clientX - startX;
+                if(dx > 40){ isDragging = false; goTo(currentIndex - 1); }
+                if(dx < -40){ isDragging = false; goTo(currentIndex + 1); }
+            }, {passive:true});
+            viewport.addEventListener('touchend', ()=> { isDragging = false; });
+
+            let resizeTimer;
+            window.addEventListener('resize', ()=> {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(updateLayout, 120);
+            });
+
+            updateLayout();
+        })();
+    </script>
+</body>
+</html>
