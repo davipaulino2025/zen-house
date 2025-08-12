@@ -15,7 +15,8 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         /* Estilos base */
         :root{
@@ -345,9 +346,190 @@
       transform: translateY(-15px);
     }
   }
+   /* container dos botões */
+  .social-fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+    pointer-events: none; /* evita que o container capture cliques fora dos botões */
+  }
+
+  /* estilo base dos botões */
+  .social-btn {
+    pointer-events: auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transform: translateZ(0);
+    transition: transform .15s ease, box-shadow .15s ease;
+    position: relative;
+    overflow: visible;
+  }
+  .social-btn:active { transform: scale(.96); }
+
+  /* cores */
+  .social-btn.fb { background: #1877F2; }
+  .social-btn.ig { background: radial-gradient(circle at 30% 30%, #feda75 0%, #fa7e1e 20%, #d62976 50%, #962fbf 75%); }
+
+  /* sombra ao pairar */
+  .social-btn:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.35); transform: translateY(-3px) scale(1.02); }
+
+  /* ícones SVG dentro dos botões */
+  .social-btn svg { width: 24px; height: 24px; display: block; }
+
+  /* partículas da explosão */
+  .particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 1;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(1);
+    will-change: transform, opacity;
+    animation: particle-move 700ms cubic-bezier(.1,.8,.3,1) forwards;
+  }
+
+  /* animação das partículas (translate será definida inline via JS) */
+  @keyframes particle-move {
+    to {
+      transform: translate(-50%, -50%) scale(0.2);
+      opacity: 0;
+    }
+  }
+
+  /* animação sutil quando o botão é clicado (curto pop) */
+  .pop {
+    animation: pop 260ms cubic-bezier(.2,.9,.3,1);
+  }
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+    100% { transform: scale(1); }
+  }
+
+  /* adaptações para telas pequenas */
+  @media (max-width: 420px){
+    .social-fixed { right: 12px; bottom: 12px; gap: 10px; }
+    .social-btn { width: 50px; height: 50px; }
+    .social-btn svg { width: 20px; height: 20px; }
+  }
+  /* Animação bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Aplica a animação nos botões */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #3b5998; /* Facebook */
+  margin: 5px;
+  animation: bounce 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Instagram cor */
+.social-btn.ig {
+  background-color: #E1306C;
+}
+
+/* Efeito hover extra */
+.social-btn:hover {
+  transform: scale(1.1);
+}
+ p {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+
+  .word {
+    display: inline-block;
+    cursor: default;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+   #animatedText {
+    text-align: center;
+  }
+  .word {
+  display: inline-block;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
     </style>
 </head>
 <body>
+    <!-- CSS -->
+<style>
+.whatsapp-btn {
+  position: fixed;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
+  z-index: 9999;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Primeiro botão */
+.btn1 {
+  bottom: 80px; /* mais alto */
+}
+
+/* Segundo botão */
+.btn2 {
+  bottom: 20px; /* mais baixo */
+}
+</style>
 
     <header class="header">
         <h1>
@@ -365,14 +547,26 @@
     <div class="main-content">
         <section id="sobre" class="section">
             <h2 style="text-align: center;">Sobre Nós</h2>
-            <p style="text-align: justify;">
-             <strong>   Recomeçar é um ato de coragem e na Zen House, cada passo dessa jornada é guiado pelo acolhimento verdadeiro, pelo cuidado integral e pelo respeito ao ser humano em sua totalidade.
-                <br><br>
-                Aqui, não tratamos apenas sintomas, mas ouvimos histórias, compreendemos dores e despertamos forças internas. Acreditamos que a transformação começa quando a pessoa se reconecta consigo mesma, encontra equilíbrio e redescobre o sentido da vida.
-                <br><br>
-                Nosso compromisso é oferecer um ambiente seguro, sereno e humano, onde o tratamento da dependência química, do alcoolismo e das questões de saúde mental acontece de forma integrada, cuidando do corpo, da mente, das emoções e das relações.
-                Na Zen House, cada recomeço é uma vitória, e cada vida transformada é a nossa maior missão.</strong>
-            </p>
+      <p style="
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+">
+  <strong>
+    Recomeçar é um ato de coragem e, na Zen House, cada passo dessa jornada é guiado pelo acolhimento verdadeiro, pelo cuidado integral e pelo respeito ao ser humano em sua totalidade.
+    <br><br>
+    Aqui, não tratamos apenas sintomas, mas ouvimos histórias, compreendemos dores e despertamos forças internas. Acreditamos que a transformação começa quando a pessoa se reconecta consigo mesma, encontra equilíbrio e redescobre o sentido da vida.
+    <br><br>
+    Nosso compromisso é oferecer um ambiente seguro, sereno e humano, onde o tratamento da dependência química, do alcoolismo e das questões de saúde mental acontece de forma integrada, cuidando do corpo, da mente, das emoções e das relações.
+    <br><br>
+    Na Zen House, cada recomeço é uma vitória, e cada vida transformada é a nossa maior missão.
+  </strong>
+</p>
         </section>
 
         <section id="galeria" class="section">
@@ -450,15 +644,25 @@
 
         <section id="tratamento" class="section">
             <h2 style="text-align: center;">Nosso Tratamento</h2>
-            <p style="text-align: center;">
-                <strong>
-                    Aqui, não tratamos apenas de dependência. Tratamos de vidas que foram quebradas pelo desespero, pelo medo e pela solidão. Cada pessoa que chega até nós carrega uma história de luta silenciosa - noites sem esperança, sonhos desfeitos e uma batalha interna que parece impossível de vencer.
-                    <br><br>
-                    Nosso tratamento vai além das medicações e terapias convencionais. Nós mergulhamos fundo na essência do ser humano, resgatando a dignidade perdida e reacendendo a chama do desejo de viver. É um caminho árduo, cheio de desafios, mas nunca estamos sozinhos nessa jornada.
-                    Aqui, transformamos dor em força, fraqueza em coragem, e desespero em renascimento. Porque acreditamos que ninguém está além da salvação, e que toda vida merece uma segunda chance.
-                    Se hoje você sente que não há saída, saiba: nosso tratamento é a ponte entre o abismo e a luz. Venha se reencontrar. Venha recomeçar.
-                </strong>
-            </p>
+            <p style="
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+">
+    <strong>
+        Aqui, não tratamos apenas de dependência. Tratamos de vidas que foram quebradas pelo desespero, pelo medo e pela solidão. Cada pessoa que chega até nós carrega uma história de luta silenciosa - noites sem esperança, sonhos desfeitos e uma batalha interna que parece impossível de vencer.
+        <br><br>
+        Nosso tratamento vai além das medicações e terapias convencionais. Nós mergulhamos fundo na essência do ser humano, resgatando a dignidade perdida e reacendendo a chama do desejo de viver. É um caminho árduo, cheio de desafios, mas nunca estamos sozinhos nessa jornada.
+        Aqui, transformamos dor em força, fraqueza em coragem, e desespero em renascimento. Porque acreditamos que ninguém está além da salvação, e que toda vida merece uma segunda chance.
+        Se hoje você sente que não há saída, saiba: nosso tratamento é a ponte entre o abismo e a luz. Venha se reencontrar. Venha recomeçar.
+    </strong>
+</p>
+
 
             <main>
                 <div class="image">
@@ -469,21 +673,47 @@
 
         <section id="contato" class="section">
             <h2 style="text-align: center;">  <strong>CONTATO</strong>  </h2>
+            <p style="text-align: center;">
+  <strong>Entre em contato para saber mais sobre nossos serviços e como podemos ajudar. Estamos aqui para você.</strong>    
+</p>
+<br><br>
+            <p id="animatedText">
+  <span>ACEITAMOS</span> <span>CONVÊNIOS</span> <span>CONSULTE-NOS</span>
+</p>
+<br><br>
             <p>
-            <strong>Entre em contato para saber mais sobre nossos serviços e como podemos ajudar. Estamos aqui para você.</strong>    
-            </p>
-            <p>
-  <strong>Telefone:</strong> 📞 <a href="https://wa.me/5519971092679" target="_blank" rel="noopener noreferrer">(19) 97109-2679</a><br>
+  <strong>Telefone:</strong>📞<a href="https://wa.me/5519971092679" target="_blank" rel="noopener noreferrer">(19) 97109-2679</a><br>
 </p>
          <p>
-  <strong>Telefone:</strong> 📞 <a href="https://wa.me/5511939092541" target="_blank" rel="noopener noreferrer">(11) 93909-2541</a><br>
+  <strong>Telefone:</strong>📞<a href="https://wa.me/5511939092541" target="_blank" rel="noopener noreferrer">(11) 93909-2541</a><br>
 </p>
             
-            <!-- Botões WhatsApp -->
-<a href="https://wa.me/5519971092679" class="whatsapp-btn">Fale Conosco pelo WhatsApp</a>
-<a href="https://wa.me/5511939092541" class="whatsapp-btn">Fale Conosco pelo WhatsApp</a>
+</div>
         </section>
     </div>
+    <div class="social-fixed" aria-hidden="false">
+  <a class="social-btn fb" id="btn-fb" href="https://www.facebook.com/people/ZEN-HOUSE-Centro-Terap%C3%AAutico/61576985236185/?rdid=t0xb6DrRT2bZpBMx&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19i3fMwgeL%2F" target="_blank" rel="noopener noreferrer" aria-label="Abrir Facebook do Zen House">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="24" height="24">
+      <path fill="white" d="M22 12.07C22 6.49 17.52 2 11.94 2S2 6.49 2 12.07C2 17.08 5.66 21.26 10.44 22v-7.02H7.9v-2.9h2.54V9.41c0-2.5 1.5-3.88 3.78-3.88 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22C18.34 21.26 22 17.08 22 12.07z"/>
+    </svg>
+  </a>
+
+  <a class="social-btn ig" id="btn-ig" href="https://www.instagram.com/zenhouse.centroterapeutico/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram do Zen House">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="24" height="24">
+      <path fill="white" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm4.75-.9a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- Botões com ícone do WhatsApp -->
+<a href="https://wa.me/5519971092679" class="whatsapp-btn btn1" target="_blank">
+  <i class="fab fa-whatsapp"></i> DAVI
+</a>
+<br>
+<a href="https://wa.me/5511939092541" class="whatsapp-btn btn2" target="_blank">
+  <i class="fab fa-whatsapp"></i> EDUARDO
+</a>
+
 
     <footer class="footer">
         <p>
@@ -595,6 +825,103 @@
             // Inicia o auto-play
             setInterval(slideToNext, slideInterval);
         })();
+         // Função que cria uma explosão de partículas no botão clicado.
+  function makeExplosion(buttonEl, color) {
+    const rect = buttonEl.getBoundingClientRect();
+    const container = document.createElement('div');
+    container.style.position = 'fixed';
+    container.style.left = (rect.left + rect.width / 2) + 'px';
+    container.style.top = (rect.top + rect.height / 2) + 'px';
+    container.style.pointerEvents = 'none';
+    container.style.zIndex = 10000;
+    document.body.appendChild(container);
+
+    const particleCount = 14; // número de partículas
+    for (let i = 0; i < particleCount; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.background = color;
+      // posição inicial central
+      p.style.left = '0';
+      p.style.top = '0';
+      // variação de tamanho
+      const size = 6 + Math.random() * 8;
+      p.style.width = p.style.height = size + 'px';
+
+      // direção aleatória em ângulo e distância
+      const angle = Math.random() * Math.PI * 2;
+      const distance = 28 + Math.random() * 42; // px
+      const dx = Math.cos(angle) * distance;
+      const dy = Math.sin(angle) * distance;
+
+      // vamos animar via transform inline + keyframes (final transformação será interpretada pelo keyframe)
+      // usamos setTimeout para aplicar transform após inserir no DOM (garante transição)
+      p.style.transform = `translate(${dx}px, ${dy}px) translate(-50%, -50%) scale(0.2)`;
+      p.style.opacity = '0';
+      // duração ligeiramente randômica
+      p.style.animationDuration = (520 + Math.random() * 300) + 'ms';
+
+      container.appendChild(p);
+
+      // forçar reflow antes de ativar a animação (garante que a keyframe seja aplicada)
+      // Mas, em vez de reflow, usaremos requestAnimationFrame
+      requestAnimationFrame(() => {
+        p.style.opacity = '1';
+        p.style.transform = `translate(${dx}px, ${dy}px) translate(-50%, -50%) scale(0.2)`;
+      });
+
+      // remove a partícula depois da animação
+      p.addEventListener('animationend', () => {
+        if (p && p.parentNode) p.parentNode.removeChild(p);
+      });
+    }
+
+    // limpa o container depois de um tempo seguro
+    setTimeout(() => {
+      if (container && container.parentNode) container.parentNode.removeChild(container);
+    }, 1200);
+  }
+
+  // associa clique nos botões
+  document.getElementById('btn-fb').addEventListener('click', function (e) {
+    // Explosão azul-claro/branco do FB
+    makeExplosion(this, 'rgba(255,255,255,0.95)');
+    // efeito "pop" visual no botão
+    this.classList.remove('pop');
+    void this.offsetWidth;
+    this.classList.add('pop');
+    // Nota: o link já abre por target="_blank" - não use preventDefault
+  });
+
+  document.getElementById('btn-ig').addEventListener('click', function (e) {
+    // Explosão colorida pro Instagram (pequena variação)
+    makeExplosion(this, 'rgba(255,255,255,0.95)');
+    this.classList.remove('pop');
+    void this.offsetWidth;
+    this.classList.add('pop');
+  });
+
+  // acessibilidade via teclado: dispara quando Enter/Space pressionados
+  ['btn-fb','btn-ig'].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault();
+        el.click();
+      }
+    });
+  });
+   const p = document.getElementById("animatedText");
+  const words = p.textContent.split(" ");
+  p.textContent = "";
+
+  words.forEach((word, i) => {
+    const span = document.createElement("span");
+    span.textContent = word + " ";
+    span.classList.add("word");
+    span.style.animationDelay = (i * 0.3) + "s";
+    p.appendChild(span);
+  });
     </script>
 </body>
 </html>
