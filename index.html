@@ -600,13 +600,28 @@ input, textarea {
     background: #001f60;
     color: white;
 }
+.pulante {
+    display: inline-block;
+    animation: pular 0.6s infinite ease-in-out;
+}
+
+@keyframes pular {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 </style>
 
     <header class="header">
-        <h1>
-            <img src="footer.png" alt="Logo Zen House" class="logo-titulo">            
-            <h2 style="text-align: center;">Zen House Centro Terapêutico</h2>
-        </h1>
+       <h1>
+    <img src="footer.png" alt="Logo Zen House" class="logo-titulo">
+    <h2 style="text-align: center;">
+        <span class="pulante">Zen House Centro Terapêutico</span>
+    </h2>
+</h1>
     </header>
 
     <nav class="nav">
@@ -617,7 +632,7 @@ input, textarea {
 
     <div class="main-content">
         <section id="sobre" class="section">
-            <h2 style="text-align: center;">Sobre Nós</h2>
+            <h2 style="text-align: center;">  <strong>Sobre Nós</strong></h2> 
       <p style="
     max-width: 700px;
     margin: 20px auto;
@@ -642,7 +657,7 @@ input, textarea {
 
         <section id="galeria" class="section">
             <h2 style="text-align: center;">
-                Nossas Unidades Masculinas e Femininas Consulte-nos
+             <strong>Nossas Unidades Masculinas e Femininas Consulte-nos</strong>   
                 <br><br>
                 <a href="https://wa.me/5519971092679" target="_blank" 
                     style="text-decoration: none; background-color: #25D366; color: white; padding: 8px 12px; border-radius: 5px; font-weight: bold; font-family: Arial, sans-serif;"
@@ -714,7 +729,7 @@ input, textarea {
         </section>
 
         <section id="tratamento" class="section">
-            <h2 style="text-align: center;">Nosso Tratamento</h2>
+            <h2 style="text-align: center;"> <strong>Nosso Tratamento</strong></h2>
             <p style="
     max-width: 700px;
     margin: 20px auto;
@@ -824,10 +839,10 @@ input, textarea {
 
 
     <footer class="footer">
-        <p>
-            <img src="footer.png" alt="Logo Zen House" class="logo-titulo" style="vertical-align: middle; height: 50px; margin-right: 50px;">
-            &copy; 2025 Zen House Centro Terapêutico. Todos os direitos reservados.
-        </p>
+      <p style="color: white;">
+    <img src="footer2.png" alt="Logo Zen House" class="logo-titulo" style="vertical-align: middle; height: 50px; margin-right: 50px;">
+    &copy; 2025 Zen House Centro Terapêutico. Todos os direitos reservados.
+</p>
     </footer>
 
     <script>
